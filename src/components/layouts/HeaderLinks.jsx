@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { heardeLinks } from "./links";
 import { Link } from "react-router-dom";
+import { IoChevronDown } from "react-icons/io5";
 
 export default function HeaderLinks() {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -24,19 +25,25 @@ export default function HeaderLinks() {
             onMouseLeave={handleMouseLeave}
           >
             <Link
-              to={`/${item.path}`}
-              className="block px-4 py-2 text-[20px] capitalize text-blue-500 hover:text-blue-700"
+              to={`/${item.linkDropDown ? "" : item.path}`}
+              className="flex justify-center items-center gap-2 tracking-widest px-4 py-2 text-[14px] capitalize text-gray-600 hover:text-black font-medium"
             >
               {item.link}
+
+              {item.linkDropDown && (
+                <span>
+                  <IoChevronDown />
+                </span>
+              )}
             </Link>
             {activeDropdown === index && item.linkDropDown && (
-              <div className="absolute top-full left-0 bg-white border border-gray-300 p-2 rounded shadow-lg">
+              <div className="z-30 absolute top-full left-0 w-[250px] border-gray-300 p-1 shadow-lg bg-white">
                 <ul>
                   {item.linkDropDown.map((el, index) => (
                     <li key={index}>
                       <Link
-                        to={`/${el.dropdownLink}`}
-                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                        to={`/${el.path}`}
+                        className="block p-2 text-gray-800 hover:bg-gray-100/50 rounded capitalize text-[14px]"
                       >
                         {el.dropdownLink}
                       </Link>

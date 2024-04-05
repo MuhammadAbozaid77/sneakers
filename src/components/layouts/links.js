@@ -11,13 +11,17 @@ export const heardeLinks = [
     linkDropDown: [{ dropdownLink: "page1" }, { dropdownLink: "page2" }],
   },
   {
-    link: "services",
-    path: "services",
+    link: "categories",
+    path: "categories",
     linkDropDown: [
-      { dropdownLink: "page1" },
-      { dropdownLink: "page2" },
-      { dropdownLink: "page3" },
-      { dropdownLink: "page4" },
+      { dropdownLink: "jordan", path: "categories/jordan" },
+      { dropdownLink: "sneakers", path: "categories/sneakers" },
+      { dropdownLink: "runningShoes", path: "categories/runningShoes" },
+      { dropdownLink: "footballShoes", path: "categories/footballShoes" },
     ],
+  },
+  {
+    link: "find",
+    path: "find",
   },
 ];
