@@ -9,7 +9,7 @@ export default function RightHeader() {
         <span className="absolute right-[-10px] top-[-10px] w-[18px] h-[18px] rounded-full text-white bg-red-700 text-[10px] flex justify-center items-center">
           11
         </span>
-        <Link to="">
+        <Link to="wishlist">
           <BsHeart size={22} />
         </Link>
       </div>
@@ -17,7 +17,7 @@ export default function RightHeader() {
         <span className="absolute right-[-10px] top-[-10px] w-[18px] h-[18px] rounded-full text-white bg-red-700 text-[10px] flex justify-center items-center">
           11
         </span>
-        <Link to="">
+        <Link to="cart">
           <BsCart size={22} />
         </Link>
       </div>

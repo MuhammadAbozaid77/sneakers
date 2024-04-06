@@ -11,7 +11,7 @@ export default function Header() {
   const [showSidebar, setShowSidebar] = useState(false);
   const toggleSidebar = () => setShowSidebar((prev) => !prev);
   return (
-    <div className="h-[80px] flex justify-between items-center relative px-10">
+    <div className="h-[100px] flex justify-between items-center relative px-10">
       <div>
         <Logo />
       </div>

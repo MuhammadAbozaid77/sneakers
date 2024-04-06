@@ -27,7 +27,7 @@ export default function HomeSlider() {
   // Restart interval whenever currentIndex changes
 
   return (
-    <div className="relative h-[40vh] w-full  md:h-[80vh]">
+    <div className="relative h-[40vh] w-[80%]  md:h-[60vh]">
       <div className="h-full">
         <img
           src={imagePath[currentIndex]}
@@ -37,13 +37,13 @@ export default function HomeSlider() {
       </div>
       <div
         onClick={handelNext}
-        className="absolute left-[5px] top-1/2 flex h-[30px] w-[30px] -translate-y-1/2 translate-x-1/2 transform cursor-pointer items-center justify-center rounded-[5px] border-black bg-black text-white p-1 duration-150 hover:bg-slate-900/90 md:left-[20px] md:h-[50px] md:w-[50px]"
+        className="absolute bottom-[10px] flex h-[30px] w-[30px]  transform cursor-pointer items-center justify-center rounded-[5px] border-black bg-black text-white p-1 duration-150 hover:bg-slate-900/90 md:right-[70px] md:h-[50px] md:w-[50px]"
       >
         <FaChevronLeft />
       </div>
       <div
         onClick={handelPrevious}
-        className="absolute right-[5px] top-1/2 flex h-[30px] w-[30px] -translate-x-1/2 -translate-y-1/2 transform cursor-pointer items-center justify-center rounded-[5px] border bg-black text-white p-1 duration-150 hover:bg-slate-900/90 md:right-[20px] md:h-[50px] md:w-[50px]"
+        className="absolute bottom-[10px] flex h-[30px] w-[30px]  transform cursor-pointer items-center justify-center rounded-[5px] border-black bg-black text-white p-1 duration-150 hover:bg-slate-900/90 md:right-[10px] md:h-[50px] md:w-[50px]"
       >
         <FaChevronRight />
       </div>

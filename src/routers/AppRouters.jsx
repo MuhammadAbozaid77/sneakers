@@ -1,6 +1,6 @@
 //
 import { Navigate, Route, Routes } from "react-router-dom";
-import PageNotFound from "../components/features/PageNotFound";
+import PageNotFound from "../components/ui/PageNotFound";
 import AppLayout from "./AppLayout";
 
 //
@@ -10,6 +10,8 @@ import Jordan from "../pages/categories/Jordan";
 import Sneakers from "../pages/categories/Sneakers";
 import RunningShoes from "../pages/categories/RunningShoes";
 import FootballShoes from "../pages/categories/FootballShoes";
+import Cart from "../pages/cart/Cart";
+import Wishlist from "../pages/wishlist/Wishlist";
 
 //
 export default function AppRouters() {
@@ -21,6 +23,8 @@ export default function AppRouters() {
           <Route index element={<Navigate replace to="home" />} />
           <Route path="home" element={<Home />} />
           <Route path="find" element={<Find />} />
+          <Route path="wishlist" element={<Wishlist />} />
+          <Route path="cart" element={<Cart />} />
           <Route path="categories/jordan" element={<Jordan />} />
           <Route path="categories/sneakers" element={<Sneakers />} />
           <Route path="categories/runningShoes" element={<RunningShoes />} />
